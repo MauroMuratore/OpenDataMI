@@ -1,0 +1,8 @@
+# EXCLUDE
+.*
+data_1/
+old_script/
+TableVar.csv
+
+# INCLUDE
+!.gitignore
