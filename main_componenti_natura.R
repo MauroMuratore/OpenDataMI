@@ -48,6 +48,7 @@ print(p_bar_incidenti)
 print(p_bar_feriti)
 print(p_bar_morti)
 
+dir.create("image/componenti_natura/totale", showWarnings = FALSE)
 save_plot(p_bar_incidenti,"componenti_natura/totale/incidenti")
 save_plot(p_bar_feriti,"componenti_natura/totale/feriti")
 save_plot(p_bar_morti,"componenti_natura/totale/morti")

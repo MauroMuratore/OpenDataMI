@@ -76,6 +76,8 @@ f_correggi_municipi <- function(dataset){
           Incidenti=Incidenti*1000/Residenti,
         Morti=Morti*100000/Residenti) %>%
    mutate(Residenti=NULL)
+ 
+ dir.create("image/mappa", showWarnings = FALSE)
 
 for(anno in 2001:2022){
   ifm_anno <- ifm_residenti_municipi %>% filter(Anno==anno)

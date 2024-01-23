@@ -6,6 +6,7 @@ source("util.R")
 source("analisi_serie_storiche.R")
 
 
+dir.create("image/serie_storica_totale", showWarnings = FALSE)
 
 ifm_totale <- read.csv("./data/incidenti_data_totale.csv")
 ifm_totale.avg <- ifm_totale %>% 
@@ -35,7 +36,7 @@ save_plot(incidenti.plot_series, "serie_storica_totale/incidenti_andamento")
 incidenti.stl <- calculate_stl(ifm_totale$Incidenti)
 
 plot_stl(stl_dataframe = incidenti.stl, "Incidenti",
-         to_save=FALSE, filename = "serie_storica_totale/incidenti")
+         to_save=TRUE, filename = "serie_storica_totale/incidenti")
 
 # CALCOLO SCARTI INTERQUARTILE
 incidente.iqr <- IQR(incidenti$Incidenti)
@@ -61,7 +62,7 @@ save_plot(feriti.plot_series, "serie_storica_totale/feriti_andamento")
 feriti.stl <- calculate_stl(ifm_totale$Feriti)
 
 plot_stl(stl_dataframe = feriti.stl, "Feriti",
-         to_save=FALSE, filename = "serie_storica_totale/feriti")
+         to_save=TRUE, filename = "serie_storica_totale/feriti")
 
 # CALCOLO SCARTI INTERQUARTILE
 feriti.iqr <- IQR(feriti$Feriti)
@@ -86,7 +87,7 @@ save_plot(morti.plot_series, "serie_storica_totale/morti_andamento")
 morti.stl <- calculate_stl(ifm_totale$Morti)
 
 plot_stl(stl_dataframe = morti.stl, "Morti",
-         to_save=FALSE, filename = "serie_storica_totale/morti")
+         to_save=TRUE, filename = "serie_storica_totale/morti")
 
 # CALCOLO SCARTI INTERQUARTILE
 morti.iqr<- IQR(morti$Morti)

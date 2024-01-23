@@ -102,9 +102,11 @@ p_mortalita_natura <- ggplot(ifm_nature.tassi, aes(Anno, Mortalita, color=Natura
 print(p_mortalita_natura)
 print(p_feribilita_natura)
 
-# save_plot(p_inc_tot, "componenti_natura/singole_nature/incidenti_tot")
-# save_plot(p_fer_tot, "componenti_natura/singole_nature/feriti_tot")
-# save_plot(p_mor_tot, "componenti_natura/singole_nature/morti_tot")
-# save_plot(p_inc_rel, "componenti_natura/singole_nature/incidenti_rel")
-# save_plot(p_fer_rel, "componenti_natura/singole_nature/feriti_rel")
-# save_plot(p_mor_rel, "componenti_natura/singole_nature/morti_rel")
+dir.create("image/componenti_natura/singole_nature", showWarnings = FALSE)
+
+save_plot(p_inc_tot, "componenti_natura/singole_nature/incidenti_tot")
+save_plot(p_fer_tot, "componenti_natura/singole_nature/feriti_tot")
+save_plot(p_mor_tot, "componenti_natura/singole_nature/morti_tot")
+save_plot(p_inc_rel, "componenti_natura/singole_nature/incidenti_rel")
+save_plot(p_fer_rel, "componenti_natura/singole_nature/feriti_rel")
+save_plot(p_mor_rel, "componenti_natura/singole_nature/morti_rel")
