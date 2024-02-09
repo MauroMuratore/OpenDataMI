@@ -1,7 +1,7 @@
 # Setup 
 Prima di tutto installare le seguenti librerie
 - dplyr
-- stm
+- stl
 - osmdata
 poi registrare la propria API key di stadiamaps e infine lanciare lo script main_setup.R
 
